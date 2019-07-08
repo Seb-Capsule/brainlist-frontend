@@ -1,0 +1,73 @@
+/* display: flex; => Au niveau du container parent pour maniuler le  positionnement des items enfants en ligne sur l'axe horizontal. Par défaut ils sont les uns en dessous des autres.
+Ensuite, on utilise flex-direction : row pour donner le sens de direction des objets mais row est par défaut car display : flex met les objets à l'horizontal donc flex-direction : row sont déjà à l'horizontal
+Ensuite, pour organiser les objets sur l'axe horizontal (de gauche à droite) on utilise justify-content : center et le long de l'exe vertical (de haut en bas) on utilisera align-items : center*/
+
+/* HEADER : Concernant les pictos du header, je définis une largeur du container  du header (aussi bien celui de gauche que celui de droite) puis j'indique un justify-content : between afin de répartir pictos 
+ comme je le souhaite. Le height regle la hauteur du ruban */
+
+/* BODY : Indiquer margin :0 et padding:0 permet de coller les objets tout en haut à gauche de l'écran sans espace */
+
+ */
+
+body {
+margin: 0;
+padding: 0;
+background-color:#FBFCFC;
+background-image: url(background-image.jpg);
+background-position:100% 0%;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+header {
+background-color: #FCF3CF;
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+height: 60px;
+margin: 0 auto;
+width: 95%;
+webkit-box-shadow: 6px 6px 5px 0px rgba(250,236,182,1);
+moz-box-shadow: 6px 6px 5px 0px rgba(250,236,182,1);
+box-shadow: 6px 6px 5px 0px rgba(250,236,182,1);
+text-align: center;
+} 
+
+
+
+#header-img {
+width: 40px;
+vertical-align: middle;
+height: auto;
+}
+
+
+ 
+#header-left{
+margin-left: 40px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+width: 100px;
+}
+
+
+ 
+#header-right{
+margin-right: 40px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+width: 100px;
+}
+
+
+#title {
+font-family: 'Mountains of Christmas';
+font-size: 40px;
+text-align: center;
+color: #D35400;
+}
